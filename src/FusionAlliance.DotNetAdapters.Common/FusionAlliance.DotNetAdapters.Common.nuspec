@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Fusion Alliance, Inc., and others</authors>
+    <owners>Fusion Alliance, Inc.</owners>
+    <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/fusionalliance/DotNetAdapters</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Library meant to provide easy abstraction and mockability for common .NET classes (e.g., DateTime, File, Environment).</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags>.NET Adapters DateTime Environment File Configuration AppSettings</tags>
+
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Configuration" />
+    </frameworkAssemblies>
+
+  </metadata>
+</package>
