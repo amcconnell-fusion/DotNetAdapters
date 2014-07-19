@@ -9,6 +9,12 @@ namespace FusionAlliance.DotNetAdapters.Common.Configuration
             return ConfigurationManager.AppSettings[name];
         }
 
+        public string GetAppSetting(string name, string defaultValue)
+        {
+            var val = ConfigurationManager.AppSettings[name];
+            return string.IsNullOrEmpty(val) ? defaultValue : val;
+        }
+
         public ConnectionStringSettings GetConnectionString(string name)
         {
             return ConfigurationManager.ConnectionStrings[name];
