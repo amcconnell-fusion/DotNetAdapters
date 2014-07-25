@@ -46,11 +46,14 @@
     <Compile Include="EnvironmentAdapter.cs" />
     <Compile Include="IDateTime.cs" />
     <Compile Include="IEnvironment.cs" />
+    <Compile Include="IO\DirectoryAdapter.cs" />
+    <Compile Include="IO\FileAdapter.cs" />
     <Compile Include="IO\FileSystemAdapter.cs" />
     <Compile Include="IO\IDirectory.cs" />
     <Compile Include="IO\IFile.cs" />
     <Compile Include="IO\IFileSystem.cs" />
     <Compile Include="IO\IPath.cs" />
+    <Compile Include="IO\PathAdapter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
