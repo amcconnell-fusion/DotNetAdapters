@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FusionAlliance.DotNetAdapters.Common", "FusionAlliance.DotNetAdapters.Common\FusionAlliance.DotNetAdapters.Common.csproj", "{2BC122E7-2F41-48BD-96FE-E230AFDB0591}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FusionAlliance.DotNetAdapters.Common.Tests", "FusionAlliance.DotNetAdapters.Common.Tests\FusionAlliance.DotNetAdapters.Common.Tests.csproj", "{AF75A94C-A1A8-4842-A283-3593085A009B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{2BC122E7-2F41-48BD-96FE-E230AFDB0591}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BC122E7-2F41-48BD-96FE-E230AFDB0591}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BC122E7-2F41-48BD-96FE-E230AFDB0591}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF75A94C-A1A8-4842-A283-3593085A009B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF75A94C-A1A8-4842-A283-3593085A009B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF75A94C-A1A8-4842-A283-3593085A009B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF75A94C-A1A8-4842-A283-3593085A009B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
