@@ -4,44 +4,60 @@ namespace FusionAlliance.DotNetAdapters.Common.IO
 {
     public class FileSystemAdapter : IFileSystem
     {
+        private readonly IDirectory directory;
+        private readonly IFile file;
+        private readonly IPath path;
+
+        public FileSystemAdapter()
+            : this(new DirectoryAdapter(), new FileAdapter(), new PathAdapter())
+        {
+        }
+
+        public FileSystemAdapter(IDirectory directory, IFile file, IPath path)
+        {
+            this.directory = directory;
+            this.file = file;
+            this.path = path;
+        }
+
         public string ReadAllText(string path)
         {
-            return File.ReadAllText(path);
+            return file.ReadAllText(path);
         }
 
         public void WriteAllText(string path, string contents)
         {
-            File.WriteAllText(path, contents);
+            file.WriteAllText(path, contents);
         }
 
         public void AppendAllText(string path, string contents)
         {
-            File.AppendAllText(path, contents);
+            file.AppendAllText(path, contents);
         }
 
         public bool Exists(string path)
         {
-            return File.Exists(path);
+            return file.Exists(path);
         }
 
         public void Delete(string path)
         {
-            File.Delete(path);
+            file.Delete(path);
         }
 
         public string Combine(string path1, string path2)
         {
-            return Path.Combine(path1, path2);
+            return path.Combine(path1, path2);
         }
 
         public void CreateDirectory(string path)
         {
-            Directory.CreateDirectory(path);
+            directory.CreateDirectory(path);
         }
 
         public void DeleteDirectory(string path)
         {
-            Directory.Delete(path, true);
+            directory.DeleteDirectory(path);
         }
     }
 }
