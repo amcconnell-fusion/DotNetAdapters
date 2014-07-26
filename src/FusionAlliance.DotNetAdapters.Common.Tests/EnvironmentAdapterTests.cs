@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using NUnit.Framework;
 
 namespace FusionAlliance.DotNetAdapters.Common.Tests
@@ -7,18 +6,18 @@ namespace FusionAlliance.DotNetAdapters.Common.Tests
     [TestFixture]
     public class EnvironmentAdapterTests
     {
-        private IEnvironment environment;
-
         [SetUp]
         public void Before_each_test()
         {
-            environment = new EnvironmentAdapter();
+            _environment = new EnvironmentAdapter();
         }
+
+        private IEnvironment _environment;
 
         [Test]
         public void MachineName_returns_expected_value()
         {
-            Assert.AreEqual(Environment.MachineName, environment.MachineName);
+            Assert.AreEqual(Environment.MachineName, _environment.MachineName);
         }
     }
 }
