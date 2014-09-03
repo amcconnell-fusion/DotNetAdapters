@@ -2,9 +2,9 @@
 {
     public class FileSystemAdapter : IFileSystem
     {
-        private readonly IDirectory _directory;
-        private readonly IFile _file;
-        private readonly IPath _path;
+        private readonly IDirectory directoryImpl;
+        private readonly IFile fileImpl;
+        private readonly IPath pathImpl;
 
         public FileSystemAdapter()
             : this(new DirectoryAdapter(), new FileAdapter(), new PathAdapter())
@@ -13,49 +13,49 @@
 
         public FileSystemAdapter(IDirectory directory, IFile file, IPath path)
         {
-            _directory = directory;
-            _file = file;
-            _path = path;
+            directoryImpl = directory;
+            fileImpl = file;
+            pathImpl = path;
         }
 
         public string ReadAllText(string path)
         {
-            return _file.ReadAllText(path);
+            return fileImpl.ReadAllText(path);
         }
 
         public void WriteAllText(string path, string contents)
         {
-            _file.WriteAllText(path, contents);
+            fileImpl.WriteAllText(path, contents);
         }
 
         public void AppendAllText(string path, string contents)
         {
-            _file.AppendAllText(path, contents);
+            fileImpl.AppendAllText(path, contents);
         }
 
         public bool Exists(string path)
         {
-            return _file.Exists(path);
+            return fileImpl.Exists(path);
         }
 
         public void Delete(string path)
         {
-            _file.Delete(path);
+            fileImpl.Delete(path);
         }
 
         public string Combine(string path1, string path2)
         {
-            return _path.Combine(path1, path2);
+            return pathImpl.Combine(path1, path2);
         }
 
         public void CreateDirectory(string path)
         {
-            _directory.CreateDirectory(path);
+            directoryImpl.CreateDirectory(path);
         }
 
         public void DeleteDirectory(string path)
         {
-            _directory.DeleteDirectory(path);
+            directoryImpl.DeleteDirectory(path);
         }
     }
 }
