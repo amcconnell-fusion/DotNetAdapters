@@ -9,15 +9,15 @@ namespace FusionAlliance.DotNetAdapters.Common.Tests
         [SetUp]
         public void Before_each_test()
         {
-            environment = new EnvironmentAdapter();
+            _environment = new EnvironmentAdapter();
         }
 
-        private IEnvironment environment;
+        private IEnvironment _environment;
 
         [Test]
         public void MachineName_returns_expected_value()
         {
-            Assert.AreEqual(Environment.MachineName, environment.MachineName);
+            Assert.AreEqual(Environment.MachineName, _environment.MachineName);
         }
     }
 }
