@@ -49,8 +49,10 @@
     <Compile Include="Configuration\ConfigurationAdapter.cs" />
     <Compile Include="Configuration\IConfiguration.cs" />
     <Compile Include="DateTimeAdapter.cs" />
+    <Compile Include="DateTimeOffsetAdapter.cs" />
     <Compile Include="EnvironmentAdapter.cs" />
     <Compile Include="IDateTime.cs" />
+    <Compile Include="IDateTimeOffset.cs" />
     <Compile Include="IEnvironment.cs" />
     <Compile Include="IO\DirectoryAdapter.cs" />
     <Compile Include="IO\FileAdapter.cs" />

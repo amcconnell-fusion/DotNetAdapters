@@ -1,4 +1,6 @@
-﻿namespace FusionAlliance.DotNetAdapters.Common.IO
+﻿using System.IO;
+
+namespace FusionAlliance.DotNetAdapters.Common.IO
 {
     public interface IFile
     {
@@ -7,5 +9,7 @@
         void AppendAllText(string path, string contents);
         bool Exists(string path);
         void Delete(string path);
+        Stream OpenRead(string path);
+        Stream Create(string path);
     }
 }

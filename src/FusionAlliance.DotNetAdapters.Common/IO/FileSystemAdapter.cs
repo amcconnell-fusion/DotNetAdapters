@@ -1,4 +1,6 @@
-﻿namespace FusionAlliance.DotNetAdapters.Common.IO
+﻿using System.IO;
+
+namespace FusionAlliance.DotNetAdapters.Common.IO
 {
     public class FileSystemAdapter : IFileSystem
     {
@@ -41,6 +43,16 @@
         public void Delete(string path)
         {
             _file.Delete(path);
+        }
+
+        public Stream OpenRead(string path)
+        {
+            return _file.OpenRead(path);
+        }
+
+        public Stream Create(string path)
+        {
+            return _file.Create(path);
         }
 
         public string Combine(string path1, string path2)

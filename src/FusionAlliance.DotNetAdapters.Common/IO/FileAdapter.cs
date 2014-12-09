@@ -28,5 +28,15 @@ namespace FusionAlliance.DotNetAdapters.Common.IO
         {
             File.Delete(path);
         }
+
+        public Stream OpenRead(string path)
+        {
+            return File.OpenRead(path);
+        }
+
+        public Stream Create(string path)
+        {
+            return File.Create(path);
+        }
     }
 }
