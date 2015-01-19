@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 
 namespace FusionAlliance.DotNetAdapters.Common.IO
 {
@@ -55,9 +56,24 @@ namespace FusionAlliance.DotNetAdapters.Common.IO
             return _file.Create(path);
         }
 
+        public void Move(string sourceFileName, string destFileName)
+        {
+            _file.Move(sourceFileName, destFileName);
+        }
+
         public string Combine(string path1, string path2)
         {
             return _path.Combine(path1, path2);
+        }
+
+        public string GetTempPath()
+        {
+            return _path.GetTempPath();
+        }
+
+        public string GetTempFileName()
+        {
+            return _path.GetTempFileName();
         }
 
         public void CreateDirectory(string path)
@@ -68,6 +84,11 @@ namespace FusionAlliance.DotNetAdapters.Common.IO
         public void DeleteDirectory(string path)
         {
             _directory.DeleteDirectory(path);
+        }
+
+        public IEnumerable<string> EnumerateFiles(string path, string searchPattern, SearchOption searchOption)
+        {
+            return _directory.EnumerateFiles(path, searchPattern, searchOption);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 
 namespace FusionAlliance.DotNetAdapters.Common.IO
 {
@@ -12,6 +13,11 @@ namespace FusionAlliance.DotNetAdapters.Common.IO
         public void DeleteDirectory(string path)
         {
             Directory.Delete(path, true);
+        }
+
+        public IEnumerable<string> EnumerateFiles(string path, string searchPattern, SearchOption searchOption)
+        {
+            return Directory.EnumerateFiles(path, searchPattern, searchOption);
         }
     }
 }

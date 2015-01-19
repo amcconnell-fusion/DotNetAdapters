@@ -38,5 +38,10 @@ namespace FusionAlliance.DotNetAdapters.Common.IO
         {
             return File.Create(path);
         }
+
+        public void Move(string sourceFileName, string destFileName)
+        {
+            File.Move(sourceFileName, destFileName);
+        }
     }
 }
