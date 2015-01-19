@@ -8,5 +8,15 @@ namespace FusionAlliance.DotNetAdapters.Common.IO
         {
             return Path.Combine(path1, path2);
         }
+
+        public string GetTempPath()
+        {
+            return Path.GetTempPath();
+        }
+
+        public string GetTempFileName()
+        {
+            return Path.GetTempFileName();
+        }
     }
 }
